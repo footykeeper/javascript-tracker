@@ -1,16 +1,34 @@
 $(document).ready(function () {
-  var links = [
-    {
-      name: 'Home',
-      url: '/'
-    }, {
-      name: 'Tracker',
-      url: '/tracker/'
-    }, {
-      name: 'Roster Creator',
-      url: '/rosters/'
-    }
-  ];
+  var href = document.location.hostname;
+  var links = [];
+  if (href === 'footykeeper.github.io' || href === 'www.footykeeper.io') {
+    links = [
+      {
+        name: 'Home',
+        url: '/javascript-tracker/'
+      }, {
+        name: 'Tracker',
+        url: '/javascript-tracker/tracker/'
+      }, {
+        name: 'Roster Creator',
+        url: '/javascript-tracker/rosters/'
+      }
+    ];
+  } else if (href === 'footykeeper.com' || href === 'www.footykeeper.com') {
+    links = [
+      {
+        name: 'Home',
+        url: '/'
+      }, {
+        name: 'Tracker',
+        url: '/tracker/'
+      }, {
+        name: 'Roster Creator',
+        url: '/rosters/'
+      }
+    ];
+  }
+  
   var i;
   var jars = document.getElementsByClassName('_navigation');
   var navString = '';
