@@ -39,5 +39,6 @@ $(document).ready(function () {
   
   for (i = 0; i < jars.length; i++) {
     jars[i].innerHTML = navString;
+    jars[i].style.zIndex = '99';
   }
 });
