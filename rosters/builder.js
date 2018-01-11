@@ -14,7 +14,8 @@ function createRoster () {
   for (i = 0; i < inputs.length; i++) {
     build = {};
     build.name = inputs[i].length;
-    build.points = roster.push(build);
+    build.points = 0;
+    roster.push(build);
   }
   
   output = JSON.stringify(roster);
