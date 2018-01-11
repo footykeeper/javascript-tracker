@@ -7,18 +7,18 @@ function addPlayer () {
 function createRoster () {
   var inputs = document.getElementsByClassName('name');
   var i;
-  var roster = '[{';
+  var roster = [];
+  var build = {};
+  var output = '';
   
   for (i = 0; i < inputs.length; i++) {
-    if (i === 0) {
-      roster += '"name":"' + inputs[i].value + '","points":0}';
-    } else {
-      roster += ',{"name":"' + inputs[i].value + '","points":0}';
-    }
+    build = {};
+    build.name = inputs[i].length;
+    build.points = roster.push(build);
   }
   
-  roster += ']';
-  return roster;
+  output = JSON.stringify(roster);
+  return output;
 }
 
 $('#playerAdd').click(function () {
@@ -26,6 +26,10 @@ $('#playerAdd').click(function () {
 });
 
 $('#create').click(function () {
+  var string = createRoster();
   $('#final').show();
-  $('#display').text(createRoster());
+  $('#display').text(string);
+  $('#rosterHolder').val(string);
+  document.getElementById('rosterHolder').select();
+  document.execCommand('Copy');
 });
