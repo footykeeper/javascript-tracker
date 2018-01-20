@@ -24,23 +24,61 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-  <div class="_navigation w3-bar w3-blue w3-large" style="position: fixed"></div>
-  <br/>
-  <p class="w3-center w3-jumbo">Recording Stats Made Easy</p>
-  <div class="w3-container w3-blue">
-    <p class="w3-center w3-xxlarge">Track Easily</p>
-    <p class="w3-large">With Footykeeper, creating your roster and recording player performances is as easy as 1-2-3! Just input your roster, give the converted roster string to the tracker, and record player events! You can then print out a table containing the players' ratings, goals, assists, and much more!</p>
-    <!-- Insert horizontal banner GoogleAd here -->
-    <p class="w3-large">Footykeeper is deigned for anybody interested in improving the method of recording their team's statistics. Footykeepers system allows you to record all of the following events for each individual player:</p>
-    <ul class="w3-large w3-ul w3-hoverable w3-border w3-white w3-card-4"><li><h2>Recordable Events</h2></li><li>Goals</li><li>Assists</li><li>Key Passes</li><li>Shot on Target</li><li>Successful Dribbles</li><li>Successful Crosses</li><li>Dispossessions</li><li>Own Goals</li><li>Saves</li><li>Interceptions</li><li>Tackles Won</li><li>Penalties Saved</li><li>Yellow Cards</li><li>Second Yellows</li><li>Red Cards</li><li>Aerials Won</li><li>Effective Clearances</li></ul>
-    <p class="w3-large">The tracker takes the events you input and based on each player's position and events creates a player rating for every player. The tracker also has a printer-friendly version that allows you to document the team performance for further analysis later.</p>
-    <hr/>
-    <p>If you are struggling to use the roster import system, try this video!</p>
-    <video width="100%" controls>
-      <source type="video/webm" src="media/tutorials/footykeeper-basic-tutorial.webm"/>
-    </video>
-    <br/><br/>
-  </div>
-  <script src="navigation/navigation.min.js"></script>
+  <div class="_navigation w3-bar w3-indigo w3-xlarge" style="position: fixed"></div>
+  <header class="w3-display-container w3-content" style="max-width:100%;">
+      <img class="w3-image" src="https://joshandjames.github.io/images/bernabeu/bernabeu.jpg"/>
+      <div class="w3-display-left w3-padding w3-col l6 m8">
+        <div class="w3-container w3-indigo">
+          <h2>Quick Access</h2>
+        </div>
+        <div class="w3-container w3-white w3-padding-16">
+          <div class="w3-row w3-large">
+            <div class="w3-col l6 m6 s6 w3-center">
+              <a href="tracker/"><div class="w3-button w3-indigo">Tracker</div></a>
+            </div>
+            <div class="w3-col l6 m6 s6 w3-center">
+              <a href="rosters/"><div class="w3-button w3-indigo">Roster Creator</div></a>
+            </div>
+          </div>
+          <br/>
+          <div class="w3-row w3-large">
+            <div class="w3-col l6 m6 s6 w3-center">
+              <a href="#tutorial"><div class="w3-button w3-indigo">Tutorial</div></a>
+            </div>
+          </div>
+          <br/>
+          <p>Background Image Courtesy of Wikipedia.</p>
+        </div>
+      </div>
+    </header>
+    <div class="w3-indigo w3-container">
+      <h2>Welcome!</h2>
+      <div class="w3-row">
+        <div class="w3-col l4 m12">
+          <p class="w3-large">Welcome to Footykeeper! We are absolutely thrilled to see that you have visited! If you're new here, we are all about providing free soccer stat tracking that is simple and easy. We have been motivated to create this web application because of the dissapointing lack of good, free stat trackers online. To get started, create a roster at our <a href="rosters/">roster creator</a>.</p>
+          <hr/>
+          <p class="w3-large">And for our users who already have a roster, give our <a href="tracker/">tracker</a> a visit.</p>
+        </div>
+        <div class="w3-col l8 m12 w3-center">
+          <video src="https://footykeeper.github.io/javascript-tracker/media/tutorials/footykeeper-basic-tutorial.webm" id="tutorial" width="80%" controls loop></video>
+          <p>A Quick Tutorial to Help You Get Started</p>
+        </div>
+      </div>
+      <div class="w3-row">
+        <div class="w3-col l6 m12">
+          <div class="w3-card-4 w3-white w3-padding w3-center">
+            <a href="https://www.youtube.com/watch?v=tGXGvzI7uMg"><iframe width="100%" height="315" src="https://www.youtube.com/embed/tGXGvzI7uMg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></a>
+            <p>Ronaldo and Messi Highlight Video by <a href="https://www.youtube.com/channel/UCr5vPy2YUScYtiyAYiGn2Rg">Wrzzer</a>: Only Viewable on YouTube</p>
+          </div>
+        </div>
+        <div class="w3-col l6 m12 w3-container">
+          <p class="w3-large">While Ronaldo and Messi are definitely the best two players in the world, it is heavily debated who is better than the other. Many Messi supporters believe that because of his world-class dribbling ability and passing vision Messi is better, while Ronaldo supporters will point out that because of his powerful shots with his left and right foot in addition to his ability to score from almost any position in the attacking third, Ronaldo surely takes the prize.</p>
+          <hr/>
+          <p class="w3-large">You can't be told who is better. You have to decide for yourself! The video nearby contains some highlights from each player. If you want to view it on YouTube, just give <a href="https://www.youtube.com/watch?v=tGXGvzI7uMg">this link</a> a click and enjoy the amazing skill that is like a second language to these players.</p>
+        </div>
+      </div>
+      <br/>
+    </div>
+  <script src="https://footykeeper.github.io/javascript-tracker/navigation/navigation.min.js"></script>
 </body>
 </html>
