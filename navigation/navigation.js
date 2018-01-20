@@ -1,7 +1,7 @@
 $(document).ready(function () {
   var href = document.location.hostname;
   var links = [];
-  if (href === 'footykeeper.github.io' || href === 'www.footykeeper.io') {
+  if (href === 'footykeeper.github.io' || href === 'www.footykeeper.github.io') {
     links = [
       {
         name: 'Home',
@@ -15,6 +15,19 @@ $(document).ready(function () {
       }
     ];
   } else if (href === 'footykeeper.com' || href === 'www.footykeeper.com') {
+    links = [
+      {
+        name: 'Home',
+        url: '/'
+      }, {
+        name: 'Tracker',
+        url: '/tracker/'
+      }, {
+        name: 'Roster Creator',
+        url: '/rosters/'
+      }
+    ];
+  } else {
     links = [
       {
         name: 'Home',
