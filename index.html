@@ -1,105 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script> (adsbygoogle = window.adsbygoogle || []).push({
-  google_ad_client: "ca-pub-1196984530661496",
-  enable_page_level_ads: true
-  });
-  </script>
-  <link rel="icon" type="image/x-icon" href="media/images/favicon.ico"/>
-  <style>
-    .centered {
-      position: absolute;
-      text-align: center;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-      color: #fff;
-      text-shadow: 1px 1px 5px #000;
-    }
-  </style>
-  <title>Home // Footykeeper</title>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head>
-<body>
-  <div class="_navigation w3-bar w3-indigo w3-xlarge" style="position: fixed"></div>
-  <header class="w3-display-container w3-content" style="max-width:100%;">
-      <img class="w3-image" src="https://joshandjames.github.io/images/bernabeu/bernabeu.jpg"/>
-      <div class="w3-display-left w3-padding w3-col l6 m8">
-        <div class="w3-container w3-indigo">
-          <h2>Quick Access</h2>
-        </div>
-        <div class="w3-container w3-white w3-padding-16">
-          <div class="w3-row w3-large">
-            <div class="w3-col l6 m6 s6 w3-center">
-              <a href="tracker/"><div class="w3-button w3-indigo">Tracker</div></a>
-            </div>
-            <div class="w3-col l6 m6 s6 w3-center">
-              <a href="rosters/"><div class="w3-button w3-indigo">Roster Creator</div></a>
-            </div>
-          </div>
-          <br/>
-          <div class="w3-row w3-large">
-            <div class="w3-col l6 m6 s6 w3-center">
-              <a href="#tutorial"><div class="w3-button w3-indigo">Tutorial</div></a>
-            </div>
-          </div>
-          <br/>
-          <p>Background Image Courtesy of Wikipedia.</p>
-        </div>
+  <head>
+    <title>HTML, CSS and JavaScript demo</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+      .navbutton{cursor:pointer;}
+    </style>
+  </head>
+  <body>
+    <div class="w3-padding-large w3-blue-grey">
+      <div class="w3-bar w3-xlarge">
+        <div class="w3-left navbutton" id="splash">Footykeeper</div>
+        <div class="w3-right navbutton" id="roster">Roster Creator</div>
+        <div class="w3-right w3-padding-large"></div>
+        <div class="w3-right navbutton" id="main">Tracker</div>
       </div>
-    </header>
-    <div class="w3-indigo w3-container">
-      <h2>Welcome</h2>
-      <div class="w3-row">
-        <div class="w3-col l4 m12">
-          <p class="w3-large">Welcome to Footykeeper! We are absolutely thrilled to see that you have visited. If you're new here, we are all about providing free soccer stat tracking that is simple and easy. We have been motivated to create this web application because of the dissapointing lack of good, free stat trackers online. To get started, please create a roster at our <a href="rosters/">roster creator</a>.</p>
-          <hr/>
-          <p class="w3-large">And for our users who already have a roster, please give our <a href="tracker/">tracker</a> a visit to get started recording stats.</p>
-        </div>
-        <div class="w3-col l8 m12 w3-center">
-          <iframe width="85%" height="400px" src="https://www.youtube.com/embed/SirQvVFidks" frameborder="0" allow="autoplay; encrypted-media" id="tutorial" allowfullscreen></iframe>
-          <p>A Quick Tutorial to Help You Get Started</p>
-        </div>
+      <div class="pane w3-large" id="home">
+        <h2>Welcome to Footykeeper! This suite allows you to record your stats and create rosters without an internet connection.</h2>
+        <p>To get started, use the handy navbar above to navigate to the tracker page or roster creator page.</p>
+        <p>Feel like this page is too empty? All elements on the downloadable version have been reduced to ensure the downloadable version is fast and a reasonable size.</p>
       </div>
-      <div class="w3-row">
-        <div class="w3-col l8 m12">
-          <ul class="w3-large w3-ul w3-hoverable w3-border w3-white w3-card-4"><li><h2>Recordable Events</h2></li><li>Goals</li><li>Assists</li><li>Key Passes</li><li>Shot on Target</li><li>Successful Dribbles</li><li>Successful Crosses</li><li>Dispossessions</li><li>Own Goals</li><li>Saves</li><li>Interceptions</li><li>Tackles Won</li><li>Penalties Saved</li><li>Yellow Cards</li><li>Second Yellows</li><li>Red Cards</li><li>Aerials Won</li><li>Effective Clearances</li></ul>
-        </div>
-        <div class="w3-col l4 m12 w3-container">
-          <p class="w3-xlarge">Recommended Recording Process:</p>
-          <ol type="I" class="w3-large">
-            <li>
-              Create your <a href="rosters/">roster</a> and save it using any of the following:
-              <ul>
-                <li>Google Docs</li>
-                <li>Notepad</li>
-                <li>Evernote</li>
-                <li>Text (the roster to yourself)</li>
-                <li>Email</li>
-                <li>Any other text-saving software</li>
-              </ul>
-            </li>
-            <li>Go to the <a href="tracker/">tracker</a> page</li>
-            <li>Input your roster and select submit</li>
-            <li>Set all of your players positions</li>
-            <li>Begin inputting events and adjusting positions as appropriate</li>
-            <li>
-              At any time, you may:
-              <ul>
-                <li>View complete statistics</li>
-                <li>Print out statistics (you will still be able to add stats after printing the stats)</li>
-              </ul>
-            </li>
-          </ol>
-          <hr/>
-          <p class="w3-large">As you record, there are plenty of events that you are able to record, allowing for a very detailed statistic record. There is also a printable option that makes it incredibly easy to document the stats.</p>
-        </div>
+      <div class="pane w3-large" id="creator" hidden>
+        <h2>Create a Roster</h2>
       </div>
-      <br/>
+      <div class="pane w3-large" id="tracker" hidden>
+        <h2>Record Stats</h2>
+      </div>
     </div>
-  <script src="https://footykeeper.github.io/javascript-tracker/navigation/navigation.min.js"></script>
-</body>
+    <script>
+$('.navbutton').click(function () {
+  var id = $(this).attr('id');
+  $('.pane').hide();
+  if (id === 'splash') {
+    $('#home').show();
+  } else if (id === 'roster') {
+    $('#creator').show();
+  } else if (id === 'main') {
+    $('#tracker').show();
+  }
+});
+    </script>
+  </body>
 </html>
