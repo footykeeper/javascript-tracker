@@ -1,0 +1,47 @@
+.background-image-field {
+  background-image: url(https://footykeeper.github.io/javascript-tracker/media/images/wide-field.JPG);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.go-back {
+  background-color: inherit;
+  animation-name: back;
+  animation-duration: 0.25s;
+  opacity: 0.9;
+}
+
+.go-white {
+  background-color: #ffffff;
+  animation-name: animateToWhite;
+  animation-duration: 0.25s;
+  opacity: 0.9;
+}
+
+@keyframes back {
+  from {
+    background-color: #ffffff;
+  } to {
+    background-color: inherit;
+  }
+}
+
+@keyframes animateToWhite {
+  from {
+    background-color: inherit;
+  } to {
+    background-color: #ffffff;
+  }
+}
+
+.centered {
+  position: absolute;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+}
