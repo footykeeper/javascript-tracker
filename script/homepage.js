@@ -32,7 +32,7 @@ $(document).ready(function () {
   var parameters = JSON.parse(getParameters());
   $('.spacer').css({height: String($(window).height() + 'px')});
   if (parameters.scroll) {
-    $("html, body").animate({scrollTop: $('#creator').offset().top - $('#navbar').height()}, 1000);
+    $("html, body").delay(500).animate({scrollTop: $('#creator').offset().top - $('#navbar').height()}, 1000);
   }
 });
 
