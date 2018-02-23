@@ -36,3 +36,7 @@ function updateRoster () {
 
   $('#rosterDisplay').html(JSON.stringify(roster));
 }
+
+$('#toRoster').click(function () {
+  $("html, body").animate({scrollTop: $('#creator').offset().top}, 1000);
+});
