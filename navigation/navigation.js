@@ -11,7 +11,7 @@ $(document).ready(function () {
         url: '/javascript-tracker/tracker/'
       }, {
         name: 'Roster Creator',
-        url: '/javascript-tracker/rosters/'
+        url: '/javascript-tracker/?scroll=true'
       }
     ];
   } else if (href === 'footykeeper.com' || href === 'www.footykeeper.com') {
@@ -24,7 +24,7 @@ $(document).ready(function () {
         url: '/tracker/'
       }, {
         name: 'Roster Creator',
-        url: '/rosters/'
+        url: '/?scroll=true'
       }
     ];
   } else {
