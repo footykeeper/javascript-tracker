@@ -1,7 +1,39 @@
+function getParameters () {
+  var fullUrl = window.location.href;
+  var splitUrl = fullUrl.split('?');
+  if (splitUrl.length === 1) {
+    return null;
+  }
+  var parameters = splitUrl[1].split('&');
+  var i;
+  var result = '{';
+  var currentParameter = '';
+  for (i = 0; i < parameters.length; i++) {
+    currentParameter = parameters[i].split('=');
+    if (i > 0) {
+      result += ',';
+    }
+
+    if (!isNaN(parseInt(currentParameter[1], 10))) {
+      result += '"' + currentParameter[0] + '":' + currentParameter[1];
+    } else if (currentParameter[1] === 'true' || currentParameter[1] === 'false') {
+      result += '"' + currentParameter[0] + '":' + currentParameter[1];
+    } else {
+      result += '"' + currentParameter[0] + '":"' + currentParameter[1] + '"';
+    }
+  }
+  result += '}';
+  return result;
+}
+
 var scrollReady = false;
 
 $(document).ready(function () {
+  var parameters = JSON.parse(getParameters());
   $('.spacer').css({height: String($(window).height() + 'px')});
+  if (parameters.scroll === 'true') {
+    $("html, body").animate({scrollTop: $('#creator').offset().top - $('#navbar').height()}, 1000);
+  }
 });
 
 $(window).scroll(function () {
@@ -38,5 +70,5 @@ function updateRoster () {
 }
 
 $('#toRoster').click(function () {
-  $("html, body").animate({scrollTop: $('#creator').offset().top}, 1000);
+  $("html, body").animate({scrollTop: $('#creator').offset().top - $('#navbar').height()}, 1000);
 });
