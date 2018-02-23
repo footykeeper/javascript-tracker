@@ -32,7 +32,7 @@
           <h1 class="w3-jumbo">Footykeeper</h1>
         </div>
       </div>
-      <div id="content" class="roboto w3-padding-large w3-white" style="opacity: 0;">
+      <div id="content" class="roboto w3-padding-large w3-white" style="opacity: 1;">
         <h2>Welcome</h2>
         <div class="w3-row">
           <div class="w3-col l4 m12">
@@ -79,6 +79,28 @@
             <hr>
             <p class="w3-large">As you record, there are plenty of events that you are able to record, allowing for a very detailed statistic record. There is also a printable option that makes it incredibly easy to document the stats.</p>
           </div>
+        </div>
+        <br/><br/>
+        <div id="creator">
+          <h2>Roster Creator</h2>
+          <br/>
+          <div class="w3-row">
+            <div class="w3-col l4 m4">
+              <div id="playerInputs">
+                <input type="text" placeholder="Player Name" class="pName" onkeyup="updateRoster();"/><br/><br/>
+                <input type="text" placeholder="Player Name" class="pName" onkeyup="updateRoster();"/><br/><br/>
+                <input type="text" placeholder="Player Name" class="pName" onkeyup="updateRoster();"/><br/><br/>
+                <input type="text" placeholder="Player Name" class="pName" onkeyup="updateRoster();"/><br/><br/>
+                <input type="text" placeholder="Player Name" class="pName" onkeyup="updateRoster();"/>
+              </div>
+            </div>
+            <div class="w3-col l8 m8 w3-blue-grey w3-padding-large" style="height: 70%">
+              <h4>Your Roster:</h4>
+              <h5 id="rosterDisplay"><i>Enter names to create roster</i></h5>
+            </div>
+          </div>
+          <br/>
+          <div class="w3-button w3-blue" id="addPlayer">Add Player</div>
         </div>
       </div>
     </div>
