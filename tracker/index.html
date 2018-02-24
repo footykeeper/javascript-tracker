@@ -1,64 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script> (adsbygoogle = window.adsbygoogle || []).push({
-google_ad_client: "ca-pub-1196984530661496",
-enable_page_level_ads: true
-});
-</script>
-  <link rel="icon" type="image/x-icon" href="../media/images/favicon.ico"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Free Soccer/Football Player Stat Tracker">
-  <meta name="keywords" content="soccer,football,point,points,tracker,https,free,online">
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
-  <title>Footykeeper Performance Tracker</title>
-  <style>.full {width: 100%;}</style>
-</head>
-<body>
-  <div class="_navigation w3-bar w3-large w3-blue" style="position: fixed"></div>
-  <div id="pre">
-    <br/><br/>
-    <div class="w3-container w3-white">
-      <p>Enter your roster here:</p>
-      <input type="text" class="w3-input" id="rosterInput" placeholder="Roster"/>
-      <br/><br/>
-      <button class="w3-button w3-blue" id="ready">Submit</button>
-      <hr/>
-      <p>Don't have a roster? Get one <a target="_blank" href="../rosters/">here</a>!</p>
+  <head>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-1196984530661496",
+        enable_page_level_ads: true
+      });
+    </script>
+    <link rel="icon" type="image/x-icon" href="media/images/favicon.ico"/>
+    <meta charset="UTF-8">
+    <title>Footykeeper // Home</title>
+    <link rel="stylesheet" href="https://joshuasmith2021.github.io/fortnite/css/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://joshuasmith2021.github.io/fortnite/css/main.css">
+    <link rel="stylesheet" href="https://footykeeper.github.io/javascript-tracker/css/homepage.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="w3-top roboto w3-xlarge go-back" id="navbar">
+      <div class="w3-bar">
+        <a href="../"><div class="navbutton">Home</div></a>
+        <a href="../?scroll=true"><div class="navbutton">Roster Creator</div></a>
+        <a href="../tracker/"><div class="navbutton">Tracker</div></a>
+      </div>
     </div>
-  </div>
-  <div id="main" hidden>
-    <br/><br/>
-    <img id="gold-card" src="../media/images/gold-card.png" hidden/>
-    <div class="w3-container w3-gray w3-center">
-      <br/>
-      <button class="w3-button w3-light-grey" id="concede">Goal Conceded</button>
-      <button class="w3-button w3-light-grey" id="clean">Clean Sheet (select this at the end of the game)</button>
+    <div class="background-image-field w3-padding-large">
+      <div class="spacer">
+        <div class="centered" id="headline" style="opacity: 1;">
+          <h1 class="w3-jumbo">Footykeeper</h1>
+        </div>
+      </div>
+      <div id="content" class="roboto w3-padding-large w3-white" style="opacity: 0;">
+        <h2>Footykeeper Tracker</h2>
+        <div id="rosterInput">
+          <h4>Insert your roster here:</h4>
+          <input type="text" placeholder="Roster" class="w3-input w3-large" id="rostInp"/>
+          <br/>
+          <div class="w3-button w3-blue w3-large" id="sendRoster">Input Roster</div>
+          <p class="w3-large">Don't have a roster? Make one <a href="">here</a>!</p>
+        </div>
+      </div>
     </div>
-    <table id="inputTable" class="w3-container w3-gray w3-container full"></table>
-    <div class="w3-gray w3-container w3-center">
-      <button class="w3-button w3-light-grey" id="submit">Submit Events</button>
-      <button class="w3-button w3-light-grey" id="positions">Submit Positions (important)</button>
-      <br/><br/>
-      <button class="w3-light-grey w3-button" id="table">View Complete Stats</button>
-      <br/><br/>
-      <button class="w3-light-grey w3-button" id="print">Print</button>
-      <br/><br/>
-    </div>
-  </div>
-  <!-- The stats table -->
-  <div id="fin" class="w3-center" style="overflow-x: scroll; width: 100%" hidden>
-    <br/><button class="w3-red w3-button" id="hide">Hide Stats</button><br/><br/><table class="w3-table w3-striped w3-hoverable"><thead><tr><th>Player</th><th>Points</th><th>Goals</th><th>Assists</th><th>Key Passes</th><th>Shots on Target</th><th>Successful Open Play Crosses</th><th>Successful Dribbles</th><th>Dispossessed</th><th>Own Goals</th><th>Clean Sheets</th><th>Saves</th><th>Interceptions</th><th>Tackles Won</th><th>Goals Conceded</th><th>Penalties Saved</th><th>Yellow Card</th><th>Red Cards</th><th>Aerials Won</th><th>Effective Clearance</th></tr></thead><tbody id="stats"></tbody></table></div>
-  <!-- The printer-friendly section -->
-  <div id="printArea" class="w3-center" style="overflow-x: scroll; width: 100%" hidden>
-    <table class="w3-table w3-striped w3-hoverable" style="font-size: 7px"><thead><tr><th>Player</th><th>Points</th><th>Goals</th><th>Assists</th><th>Key Passes</th><th>Shots on Target</th><th>Successful Open Play Crosses</th><th>Successful Dribbles</th><th>Dispossessed</th><th>Own Goals</th><th>Clean Sheets</th><th>Saves</th><th>Interceptions</th><th>Tackles Won</th><th>Goals Conceded</th><th>Penalties Saved</th><th>Yellow Card</th><th>Red Cards</th><th>Aerials Won</th><th>Effective Clearance</th></tr></thead><tbody id="printTable"></tbody></table>
-    <br/><br/>
-    <button class="w3-red w3-button" id="hidePrint">Show Tracker</button>
-    <br/><br/>
-  </div>
-  <script src="tracker.min.js"></script>
-  <script src="../navigation/navigation.min.js"></script>
-</body>
+    <script src="https://footykeeper.github.io/javascript-tracker/script/homepage.min.js"></script>
+  </body>
 </html>
