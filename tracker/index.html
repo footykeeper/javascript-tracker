@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <style>#main{overflow-x:scroll;}</style>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({
@@ -10,6 +11,7 @@
     </script>
     <link rel="icon" type="image/x-icon" href="media/images/favicon.ico"/>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footykeeper // Home</title>
     <link rel="stylesheet" href="https://joshuasmith2021.github.io/fortnite/css/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -32,7 +34,7 @@
           <h1 class="w3-jumbo">Footykeeper</h1>
         </div>
       </div>
-      <div id="content" class="roboto w3-padding-large w3-white" style="opacity: 0;">
+      <div id="content" class="roboto w3-padding-large w3-white" style="opacity: 1;">
         <h2>Footykeeper Tracker</h2>
         <div id="rosterInput">
           <h4>Insert your roster here:</h4>
@@ -40,6 +42,9 @@
           <br/>
           <div class="w3-button w3-blue w3-large" id="sendRoster">Input Roster</div>
           <p class="w3-large">Don't have a roster? Make one <a href="">here</a>!</p>
+        </div>
+        <div id="main">
+          <table class="w3-table w3-border w3-bordered w3-hoverable w3-medium"><thead><tr><th>Player</th><th>Goals</th><th>Assists</th><th>Shots</th><th>Crosses</th><th>Own Goals</th><th>Saves</th><th>Interceptions</th><th>Tackles</th><th>Penalties Saved</th><th>Yellow Cards</th><th>Red Cards</th></tr></thead><tbody id="statInput"></tbody></table>
         </div>
       </div>
     </div>
