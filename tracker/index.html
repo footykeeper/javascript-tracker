@@ -93,6 +93,14 @@ function registerEvent (clickedElement) {
       players[parentInt].goals--;
       currentInt = players[parentInt].goals;
     }
+  } else if ($(clickedElement).hasClass('assists')) {
+    if ($(clickedElement).hasClass('plus')) {
+      players[parentInt].assists++;
+      currentInt = players[parentInt].assists;
+    } else if ($(clickedElement).hasClass('minus')) {
+      players[parentInt].assists--;
+      currentInt = players[parentInt].assists;
+    }
   }
   $(clickedElement).parent().children().not('.plus, .minus').text(currentInt);
 }
