@@ -73,7 +73,7 @@ $('#sendRoster').click(function () {
   }
   
   for (i = 0; i < players.length; i++) {
-    $('#statInput').append('<tr id="prow' + i + '"><td>' + players[i].playerName + '</td><td><div onclick="registerEvent(this)" class="input-button goals">0&nbsp;</div><div onclick="registerEvent(this)" class="input-button plus goals">+&nbsp;</div><div onclick="registerEvent(this)" class="input-button minus goals">-&nbsp;</div></td><td><div onclick="registerEvent(this)" class="input-button assists">0&nbsp;</div><div onclick="registerEvent(this)" class="input-button plus assists">+&nbsp;</div><div onclick="registerEvent(this)" class="input-button minus assists">-&nbsp;</div></td><td><div onclick="registerEvent(this)" class="input-button shots">0&nbsp;</div><div onclick="registerEvent(this)" class="input-button plus shots">+&nbsp;</div><div onclick="registerEvent(this)" class="input-button minus shots">-&nbsp;</div></td><td><div onclick="registerEvent(this)" class="input-button crosses">0&nbsp;</div><div onclick="registerEvent(this)" class="input-button plus crosses">+&nbsp;</div><div onclick="registerEvent(this)" class="input-button minus crosses">-&nbsp;</div></td><td><div onclick="registerEvent(this)" class="input-button saves">0&nbsp;</div><div onclick="registerEvent(this)" class="input-button plus saves">+&nbsp;</div><div onclick="registerEvent(this)" class="input-button minus saves">-&nbsp;</div></td><td><div onclick="registerEvent(this)" class="input-button tackles">0&nbsp;</div><div onclick="registerEvent(this)" class="input-button plus tackles">+&nbsp;</div><div onclick="registerEvent(this)" class="input-button minus tackles">-&nbsp;</div></td><td><div onclick="registerEvent(this)" class="input-button yellows">0&nbsp;</div><div onclick="registerEvent(this)" class="input-button plus yellows">+&nbsp;</div><div onclick="registerEvent(this)" class="input-button minus yellows">-&nbsp;</div></td><td><div onclick="registerEvent(this)" class="input-button reds">0&nbsp;</div><div onclick="registerEvent(this)" class="input-button plus reds">+&nbsp;</div><div onclick="registerEvent(this)" class="input-button minus reds">-&nbsp;</div></td></tr>');
+    $('#statInput').append('<tr id="prow' + i + '" style="font-size: 25px"><td>' + players[i].playerName + '</td><td><div onclick="registerEvent(this)" class="input-button goals">0&nbsp;</div><div onclick="registerEvent(this)" class="input-button plus goals">+&nbsp;</div><div onclick="registerEvent(this)" class="input-button minus goals">-&nbsp;</div></td><td><div onclick="registerEvent(this)" class="input-button assists">0&nbsp;</div><div onclick="registerEvent(this)" class="input-button plus assists">+&nbsp;</div><div onclick="registerEvent(this)" class="input-button minus assists">-&nbsp;</div></td><td><div onclick="registerEvent(this)" class="input-button shots">0&nbsp;</div><div onclick="registerEvent(this)" class="input-button plus shots">+&nbsp;</div><div onclick="registerEvent(this)" class="input-button minus shots">-&nbsp;</div></td><td><div onclick="registerEvent(this)" class="input-button crosses">0&nbsp;</div><div onclick="registerEvent(this)" class="input-button plus crosses">+&nbsp;</div><div onclick="registerEvent(this)" class="input-button minus crosses">-&nbsp;</div></td><td><div onclick="registerEvent(this)" class="input-button saves">0&nbsp;</div><div onclick="registerEvent(this)" class="input-button plus saves">+&nbsp;</div><div onclick="registerEvent(this)" class="input-button minus saves">-&nbsp;</div></td><td><div onclick="registerEvent(this)" class="input-button tackles">0&nbsp;</div><div onclick="registerEvent(this)" class="input-button plus tackles">+&nbsp;</div><div onclick="registerEvent(this)" class="input-button minus tackles">-&nbsp;</div></td><td><div onclick="registerEvent(this)" class="input-button yellows">0&nbsp;</div><div onclick="registerEvent(this)" class="input-button plus yellows">+&nbsp;</div><div onclick="registerEvent(this)" class="input-button minus yellows">-&nbsp;</div></td><td><div onclick="registerEvent(this)" class="input-button reds">0&nbsp;</div><div onclick="registerEvent(this)" class="input-button plus reds">+&nbsp;</div><div onclick="registerEvent(this)" class="input-button minus reds">-&nbsp;</div></td></tr>');
   }
   
   $('#rosterInput').hide();
@@ -101,8 +101,56 @@ function registerEvent (clickedElement) {
       players[parentInt].assists--;
       currentInt = players[parentInt].assists;
     }
+  } else if ($(clickedElement).hasClass('crosses')) {
+    if ($(clickedElement).hasClass('plus')) {
+      players[parentInt].crosses++;
+      currentInt = players[parentInt].crosses;
+    } else if ($(clickedElement).hasClass('minus')) {
+      players[parentInt].crosses--;
+      currentInt = players[parentInt].crosses;
+    }
+  } else if ($(clickedElement).hasClass('shots')) {
+    if ($(clickedElement).hasClass('plus')) {
+      players[parentInt].shots++;
+      currentInt = players[parentInt].shots;
+    } else if ($(clickedElement).hasClass('minus')) {
+      players[parentInt].shots--;
+      currentInt = players[parentInt].shots;
+    }
+  } else if ($(clickedElement).hasClass('saves')) {
+    if ($(clickedElement).hasClass('plus')) {
+      players[parentInt].saves++;
+      currentInt = players[parentInt].saves;
+    } else if ($(clickedElement).hasClass('minus')) {
+      players[parentInt].saves--;
+      currentInt = players[parentInt].saves;
+    }
+  } else if ($(clickedElement).hasClass('tackles')) {
+    if ($(clickedElement).hasClass('plus')) {
+      players[parentInt].tackles++;
+      currentInt = players[parentInt].tackles;
+    } else if ($(clickedElement).hasClass('minus')) {
+      players[parentInt].tackles--;
+      currentInt = players[parentInt].tackles;
+    }
+  } else if ($(clickedElement).hasClass('yellows')) {
+    if ($(clickedElement).hasClass('plus')) {
+      players[parentInt].yellows++;
+      currentInt = players[parentInt].yellows;
+    } else if ($(clickedElement).hasClass('minus')) {
+      players[parentInt].yellows--;
+      currentInt = players[parentInt].yellows;
+    }
+  } else if ($(clickedElement).hasClass('reds')) {
+    if ($(clickedElement).hasClass('plus')) {
+      players[parentInt].reds++;
+      currentInt = players[parentInt].reds;
+    } else if ($(clickedElement).hasClass('minus')) {
+      players[parentInt].reds--;
+      currentInt = players[parentInt].reds;
+    }
   }
-  $(clickedElement).parent().children().not('.plus, .minus').text(currentInt);
+  $(clickedElement).parent().children().not('.plus, .minus').html(currentInt + '&nbsp;');
 }
     </script>
     <script src="https://footykeeper.github.io/javascript-tracker/script/homepage.min.js"></script>
