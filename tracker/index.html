@@ -83,9 +83,18 @@ $('#sendRoster').click(function () {
 function registerEvent (clickedElement) {
   var parentID = $(clickedElement).parent().parent().attr('id');
   var parentString = parentID.split('prow');
-  var parentInt = parentString[0];
-  alert(parentInt);
-  alert(parentID + '\n' + parentString + '\n' + parentInt);
+  var parentInt = parseInt(parentString[1], 10);
+  var currentInt = 0;
+  if ($(clickedElement).hasClass('goals')) {
+    if ($(clickedElement).hasClass('plus')) {
+      players[parentInt].goals++;
+      currentInt = players[parentInt].goals;
+    } else if ($(clickedElement).hasClass('minus')) {
+      players[parentInt].goals--;
+      currentInt = players[parentInt].goals;
+    }
+  }
+  $(clickedElement).parent().children().not('.plus, .minus').text(currentInt);
 }
     </script>
     <script src="https://footykeeper.github.io/javascript-tracker/script/homepage.min.js"></script>
