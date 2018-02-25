@@ -1,17 +1,20 @@
 var players = [];
 
-$('#sendRoster').click(function () {
-  var playerNames = JSON.parse($('#rostInp').val());
-  if (playerNames[0].points !== undefined) {
-    playerNames = (function () {
-      var j;
-      var playerNamesArray = [];
-      for (j = 0; j < playerNames.length; j++) {
-        playerNamesArray.push(playerNames[i].name);
-      }
-      return playerNamesArray;
-    })();
+function checkRoster (dataa) {
+  var playerNamesArray = [];
+  var j;
+  if (dataa[0].points !== undefined) {
+    for (j = 0; j < dataa.length; j++) {
+      playerNamesArray.push(dataa[j].name);
+    }
+    return playerNamesArray;
+  } else {
+    return dataa;
   }
+}
+
+$('#sendRoster').click(function () {
+  var playerNames = checkRoster(JSON.parse($('#rostInp').val()));
   var i;
   
   for (i = 0; i < playerNames.length; i++) {
