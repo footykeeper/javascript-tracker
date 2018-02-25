@@ -2,6 +2,16 @@ var players = [];
 
 $('#sendRoster').click(function () {
   var playerNames = JSON.parse($('#rostInp').val());
+  if (playerNames[0].points !== undefined) {
+    playerNames = (function () {
+      var j;
+      var playerNamesArray = [];
+      for (j = 0; j < playerNames.length; j++) {
+        playerNamesArray.push(playerNames[i].name);
+      }
+      return playerNamesArray;
+    })();
+  }
   var i;
   
   for (i = 0; i < playerNames.length; i++) {
