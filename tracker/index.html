@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>#main{overflow-x:scroll;}</style>
+    <style>#main{overflow-x:scroll;}.input-button{font-size: 20px;float: left;}.input-button:hover{cursor:pointer;}</style>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({
@@ -44,7 +44,7 @@
           <p class="w3-large">Don't have a roster? Make one <a href="">here</a>!</p>
         </div>
         <div id="main">
-          <table class="w3-table w3-border w3-bordered w3-hoverable w3-medium"><thead><tr><th>Player</th><th>Goals</th><th>Assists</th><th>Shots</th><th>Crosses</th><th>Own Goals</th><th>Saves</th><th>Interceptions</th><th>Tackles</th><th>Penalties Saved</th><th>Yellow Cards</th><th>Red Cards</th></tr></thead><tbody id="statInput"></tbody></table>
+          <table class="w3-table w3-border w3-bordered w3-hoverable w3-medium"><thead><tr><th>Player</th><th>Goals</th><th>Assists</th><th>Shots</th><th>Crosses</th><th>Saves</th><th>Tackles</th><th>Yellow Cards</th><th>Red Cards</th></tr></thead><tbody id="statInput"></tbody></table>
         </div>
       </div>
     </div>
@@ -66,17 +66,14 @@ $('#sendRoster').click(function () {
     players[i].assists = 0;
     players[i].shots = 0;
     players[i].crosses = 0;
-    players[i].ownGoals = 0;
     players[i].saves = 0;
-    players[i].interceptions = 0;
     players[i].tackles = 0;
-    players[i].penaltiesSaved = 0;
     players[i].yellows = 0;
     players[i].reds = 0;
   }
   
   for (i = 0; i < players.length; i++) {
-    
+    $('#statInput').append('<tr><td>' + players[i].playerName + '</td><td><div class="input-button goals">0&nbsp;</div><div class="input-button plus goals">+&nbsp;</div><div class="input-button minus goals">-&nbsp;</div></td><td><div class="input-button assists">0&nbsp;</div><div class="input-button plus assists">+&nbsp;</div><div class="input-button minus assists">-&nbsp;</div></td><td><div class="input-button shots">0&nbsp;</div><div class="input-button plus shots">+&nbsp;</div><div class="input-button minus shots">-&nbsp;</div></td><td><div class="input-button crosses">0&nbsp;</div><div class="input-button plus crosses">+&nbsp;</div><div class="input-button minus crosses">-&nbsp;</div></td><td><div class="input-button saves">0&nbsp;</div><div class="input-button plus saves">+&nbsp;</div><div class="input-button minus saves">-&nbsp;</div></td><td><div class="input-button tackles">0&nbsp;</div><div class="input-button plus tackles">+&nbsp;</div><div class="input-button minus tackles">-&nbsp;</div></td><td><div class="input-button yellows">0&nbsp;</div><div class="input-button plus yellows">+&nbsp;</div><div class="input-button minus yellows">-&nbsp;</div></td><td><div class="input-button reds">0&nbsp;</div><div class="input-button plus reds">+&nbsp;</div><div class="input-button minus reds">-&nbsp;</div></td></tr>');
   }
   
   $('#rosterInput').hide();
