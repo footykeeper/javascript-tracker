@@ -41,7 +41,16 @@
     </div>
   </div>
   <input id="rosterHolder" style="width: 1px; height: 1px; color: #fff; background-color: #fff; border-color: #fff; border:none"/>
-  <script src="builder.min.js"></script>
+  <script>
+$(document).ready(function () {
+  var inputs = document.getElementsByClassName('name');
+  var i;
+  for (i = 0; i < inputs.length; i++) {
+    inputs[i].className += ' w3-disabled';
+  }
+  $('#playerAdd, #create').addClass('w3-disabled');
+});
+  </script>
   <script src="../navigation/navigation.min.js"></script>
 </body>
 </html>
