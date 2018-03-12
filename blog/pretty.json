@@ -1,0 +1,13 @@
+var feed = {
+  "title":"News // Footykeeper",
+  "posts":[
+    {
+      "postTitle":"News Feed Beta",
+      "author":"J",
+      "authorTitle":"Developer",
+      "date":"11 March 2018",
+      "time":"7:00 PM",
+      "content":"Today, Footykeeper has launched its brand new news feed! This is the first post, and it is short for that reason."
+    }
+  ]
+};
